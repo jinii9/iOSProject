@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YJu-0Q-4Vm">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldk-WM-9hV">
@@ -60,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="신입사원 행동 강령 제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ndp-lQ-LRg">
-                                <rect key="frame" x="16" y="119" width="361" height="50"/>
+                                <rect key="frame" x="16" y="75" width="361" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="XMO-IY-wiZ"/>
                                 </constraints>
@@ -72,7 +72,7 @@
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PyU-3c-uFv">
-                                <rect key="frame" x="16" y="185" width="361" height="551"/>
+                                <rect key="frame" x="16" y="141" width="361" height="595"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -164,22 +164,54 @@
                     <view key="view" contentMode="scaleToFill" id="dPt-P4-abO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j9C-0w-YJN">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="싹사원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0W-Lt-eec">
+                                        <rect key="frame" x="169.33333333333334" y="12.333333333333327" width="54.666666666666657" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigger-character-icon" translatesAutoresizingMaskIntoConstraints="NO" id="7Kf-XK-cVo">
+                                        <rect key="frame" x="113.33333333333331" y="5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="0wT-lJ-0dq"/>
+                                            <constraint firstAttribute="height" constant="40" id="MYk-3n-1GK"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BFM-rM-NEV"/>
+                                    <constraint firstItem="e0W-Lt-eec" firstAttribute="leading" secondItem="7Kf-XK-cVo" secondAttribute="trailing" constant="16" id="CP4-fR-vHv"/>
+                                    <constraint firstItem="7Kf-XK-cVo" firstAttribute="centerY" secondItem="j9C-0w-YJN" secondAttribute="centerY" id="Gb8-Oz-mEG"/>
+                                    <constraint firstItem="e0W-Lt-eec" firstAttribute="centerY" secondItem="j9C-0w-YJN" secondAttribute="centerY" id="dGO-Ne-Hlg"/>
+                                    <constraint firstItem="e0W-Lt-eec" firstAttribute="centerX" secondItem="j9C-0w-YJN" secondAttribute="centerX" id="oWM-8K-TWK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6u1-Bu-7DB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j9C-0w-YJN" firstAttribute="leading" secondItem="6u1-Bu-7DB" secondAttribute="leading" id="Dq7-5k-XcJ"/>
+                            <constraint firstItem="6u1-Bu-7DB" firstAttribute="trailing" secondItem="j9C-0w-YJN" secondAttribute="trailing" id="Vqe-pe-fK0"/>
+                            <constraint firstItem="j9C-0w-YJN" firstAttribute="top" secondItem="6u1-Bu-7DB" secondAttribute="top" id="Xz2-Bb-Agb"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="음료" image="cup.and.heat.waves.fill" catalog="system" id="xAE-S8-wLe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8s-md-ktg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2764" y="176"/>
+            <point key="canvasLocation" x="2762.5954198473282" y="175.35211267605635"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wBl-8i-7Hx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vln-9S-tNV" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Vln-9S-tNV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A1W-90-PpA">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -191,12 +223,12 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
-        <!--kkk-->
+        <!--싹사원-->
         <scene sceneID="ndk-32-khW">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="m8Z-Lz-v8k" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="kkk" id="Mqc-X6-n5K"/>
+                    <navigationItem key="navigationItem" title="싹사원" id="Mqc-X6-n5K"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rSX-vV-ikx">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -215,6 +247,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bigger-character-icon" width="3750" height="3750"/>
         <image name="cup.and.heat.waves.fill" catalog="system" width="128" height="118"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="ivfluid.bag.fill" catalog="system" width="87" height="128"/>
