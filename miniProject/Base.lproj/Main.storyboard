@@ -16,9 +16,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YJu-0Q-4Vm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YJu-0Q-4Vm">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" rowHeight="80" id="dzs-j2-Sy6" customClass="TableViewCell" customModule="miniProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dzs-j2-Sy6" id="87J-TD-R4a">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQQ-hI-tGW">
+                                                    <rect key="frame" x="20" y="48" width="353" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="XNw-fO-yhw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RM-wc-NeL">
+                                                    <rect key="frame" x="20" y="11" width="353" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="KYz-VH-t2J"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8RM-wc-NeL" firstAttribute="top" secondItem="87J-TD-R4a" secondAttribute="topMargin" id="B8H-PT-42m"/>
+                                                <constraint firstItem="iQQ-hI-tGW" firstAttribute="bottom" secondItem="87J-TD-R4a" secondAttribute="bottomMargin" id="Smt-aA-4bC"/>
+                                                <constraint firstItem="8RM-wc-NeL" firstAttribute="leading" secondItem="87J-TD-R4a" secondAttribute="leadingMargin" id="e3R-jA-Wci"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iQQ-hI-tGW" secondAttribute="trailing" id="wGn-lK-CT8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8RM-wc-NeL" secondAttribute="trailing" id="yoU-3Y-Clh"/>
+                                                <constraint firstItem="iQQ-hI-tGW" firstAttribute="leading" secondItem="87J-TD-R4a" secondAttribute="leadingMargin" id="zDR-Gh-jAm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="iQQ-hI-tGW" id="8gm-Ni-mDP"/>
+                                            <outlet property="titleLabel" destination="8RM-wc-NeL" id="ilf-w8-KSy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldk-WM-9hV">
                                 <rect key="frame" x="317" y="693" width="60" height="60"/>
@@ -27,7 +74,15 @@
                                     <constraint firstAttribute="height" constant="60" id="GPV-aj-k4A"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" imagePadding="0.0">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="g9B-vz-M18" kind="show" id="fMl-V7-jdy"/>
                                 </connections>
@@ -46,6 +101,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="식사" image="fork.knife" catalog="system" id="TsU-Hh-vkJ"/>
                     <navigationItem key="navigationItem" id="ftW-UZ-rf2"/>
+                    <connections>
+                        <outlet property="tableView" destination="YJu-0Q-4Vm" id="Erf-5N-t5i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,12 +191,12 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
-        <!--kkk-->
+        <!--싹사원-->
         <scene sceneID="ndk-32-khW">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="m8Z-Lz-v8k" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="kkk" id="Mqc-X6-n5K"/>
+                    <navigationItem key="navigationItem" title="싹사원" id="Mqc-X6-n5K"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rSX-vV-ikx">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -161,6 +219,7 @@
         <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="ivfluid.bag.fill" catalog="system" width="87" height="128"/>
         <image name="person.line.dotted.person.fill" catalog="system" width="128" height="59"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
