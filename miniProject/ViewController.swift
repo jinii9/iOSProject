@@ -19,6 +19,9 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         tableView.dataSource = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         fetchDataFromFirestore()
     }
     
