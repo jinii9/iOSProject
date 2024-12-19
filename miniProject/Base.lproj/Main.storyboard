@@ -15,15 +15,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YJu-0Q-4Vm">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldk-WM-9hV">
+                                <rect key="frame" x="317" y="693" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="4WU-nw-CyA"/>
+                                    <constraint firstAttribute="height" constant="60" id="GPV-aj-k4A"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="g9B-vz-M18" kind="show" id="fMl-V7-jdy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YJu-0Q-4Vm" secondAttribute="bottom" id="5x0-fF-EwP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ldk-WM-9hV" secondAttribute="bottom" constant="16" id="7w5-Q0-Jp1"/>
+                            <constraint firstItem="YJu-0Q-4Vm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dUM-68-Te8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YJu-0Q-4Vm" secondAttribute="trailing" id="jTQ-bn-VCM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ldk-WM-9hV" secondAttribute="trailing" constant="16" id="s6K-91-XyG"/>
+                            <constraint firstItem="YJu-0Q-4Vm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="x7R-eg-16f"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="식사" image="fork.knife" catalog="system" id="TsU-Hh-vkJ"/>
                     <navigationItem key="navigationItem" id="ftW-UZ-rf2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2764" y="-532"/>
+            <point key="canvasLocation" x="2762.5954198473282" y="-532.3943661971831"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="J0j-vz-Bin">
+            <objects>
+                <viewController id="g9B-vz-M18" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jHl-vm-cGk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ef2-c0-Fd9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oKJ-6f-uvw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AKv-ck-JTl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3729" y="-532"/>
         </scene>
         <!--회사생활-->
         <scene sceneID="OWY-rX-6Wk">
@@ -91,13 +133,14 @@
             </objects>
             <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--kkk-->
         <scene sceneID="ndk-32-khW">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="m8Z-Lz-v8k" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Mqc-X6-n5K"/>
+                    <navigationItem key="navigationItem" title="kkk" id="Mqc-X6-n5K"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rSX-vV-ikx">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
