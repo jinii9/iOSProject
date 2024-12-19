@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4F761382D13EAB40099E4A1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B4F761372D13EAB40099E4A1 /* FirebaseFirestore */; };
+		4A92887E2D14082200392955 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4A92887D2D14082200392955 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4F761382D13EAB40099E4A1 /* FirebaseFirestore in Frameworks */,
+				4A92887E2D14082200392955 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 			);
 			name = miniProject;
 			packageProductDependencies = (
-				B4F761372D13EAB40099E4A1 /* FirebaseFirestore */,
+				4A92887D2D14082200392955 /* FirebaseFirestore */,
 			);
 			productName = miniProject;
 			productReference = B4F76FEF2D13A9650055C6C0 /* miniProject.app */;
@@ -114,7 +114,7 @@
 			mainGroup = B4F76FE62D13A9650055C6C0;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				B4F761362D13EAB40099E4A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				4A92887C2D14082200392955 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B4F76FF02D13A9650055C6C0 /* Products */;
@@ -348,7 +348,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B4F761362D13EAB40099E4A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		4A92887C2D14082200392955 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -359,9 +359,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B4F761372D13EAB40099E4A1 /* FirebaseFirestore */ = {
+		4A92887D2D14082200392955 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B4F761362D13EAB40099E4A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 4A92887C2D14082200392955 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
