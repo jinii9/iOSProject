@@ -196,14 +196,29 @@
                                             <constraint firstAttribute="width" constant="40" id="aeu-Uk-Dzq"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGl-P7-Qy0">
+                                        <rect key="frame" x="8" y="8" width="40" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="HZB-3G-gYv"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.30092635750000002" green="0.33267748359999999" blue="0.3842837214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
+                                        <connections>
+                                            <action selector="backBtn:" destination="g9B-vz-M18" eventType="touchUpInside" id="7bj-fl-kXf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94810396429999999" green="0.97622805830000003" blue="0.99606639149999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="bqb-zW-X6D" firstAttribute="centerX" secondItem="wYK-zc-UaP" secondAttribute="centerX" id="685-SM-S6L"/>
                                     <constraint firstItem="bqb-zW-X6D" firstAttribute="leading" secondItem="Dl3-Wj-YM5" secondAttribute="trailing" constant="16" id="GDM-Lo-FGU"/>
                                     <constraint firstAttribute="height" constant="50" id="NiB-0c-mCP"/>
+                                    <constraint firstItem="LGl-P7-Qy0" firstAttribute="centerY" secondItem="Dl3-Wj-YM5" secondAttribute="centerY" id="PlU-9p-qL1"/>
                                     <constraint firstItem="bqb-zW-X6D" firstAttribute="centerY" secondItem="wYK-zc-UaP" secondAttribute="centerY" id="dKD-HN-uAO"/>
                                     <constraint firstItem="bqb-zW-X6D" firstAttribute="centerY" secondItem="Dl3-Wj-YM5" secondAttribute="centerY" id="fOm-py-pBp"/>
+                                    <constraint firstItem="LGl-P7-Qy0" firstAttribute="top" secondItem="wYK-zc-UaP" secondAttribute="topMargin" id="hwf-pu-zhQ"/>
+                                    <constraint firstItem="LGl-P7-Qy0" firstAttribute="leading" secondItem="wYK-zc-UaP" secondAttribute="leading" constant="8" id="xdP-Wf-EMy"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="신입사원 행동 강령 제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ndp-lQ-LRg">
@@ -374,6 +389,7 @@
     </scenes>
     <resources>
         <image name="bigger-character-icon" width="3750" height="3750"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="cup.and.heat.waves.fill" catalog="system" width="128" height="118"/>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="ivfluid.bag.fill" catalog="system" width="87" height="128"/>
