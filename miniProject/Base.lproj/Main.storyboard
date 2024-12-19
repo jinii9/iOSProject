@@ -18,14 +18,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="식사" id="TsU-Hh-vkJ"/>
+                    <tabBarItem key="tabBarItem" title="식사" image="fork.knife" catalog="system" id="TsU-Hh-vkJ"/>
                     <navigationItem key="navigationItem" id="ftW-UZ-rf2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2764" y="-532"/>
         </scene>
-        <!--Item-->
+        <!--회사생활-->
         <scene sceneID="OWY-rX-6Wk">
             <objects>
                 <viewController id="97L-Ns-iFL" sceneMemberID="viewController">
@@ -35,13 +35,13 @@
                         <viewLayoutGuide key="safeArea" id="jlK-SA-xoa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="rcZ-8m-9EW"/>
+                    <tabBarItem key="tabBarItem" title="회사생활" image="ivfluid.bag.fill" catalog="system" id="rcZ-8m-9EW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oj6-Ox-Cgq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2763" y="1577"/>
         </scene>
-        <!--Item-->
+        <!--인멕관리-->
         <scene sceneID="W1d-ru-7XY">
             <objects>
                 <viewController id="NOk-Kg-80F" sceneMemberID="viewController">
@@ -51,13 +51,13 @@
                         <viewLayoutGuide key="safeArea" id="xSk-UJ-go3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Vpc-aC-ffc"/>
+                    <tabBarItem key="tabBarItem" title="인멕관리" image="person.line.dotted.person.fill" catalog="system" id="Vpc-aC-ffc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3i-DQ-Fgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2763" y="876"/>
         </scene>
-        <!--Item-->
+        <!--음료-->
         <scene sceneID="odP-fE-FTm">
             <objects>
                 <viewController id="sMx-S1-53v" sceneMemberID="viewController">
@@ -67,7 +67,7 @@
                         <viewLayoutGuide key="safeArea" id="6u1-Bu-7DB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="xAE-S8-wLe"/>
+                    <tabBarItem key="tabBarItem" title="음료" image="cup.and.heat.waves.fill" catalog="system" id="xAE-S8-wLe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8s-md-ktg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,6 +114,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cup.and.heat.waves.fill" catalog="system" width="128" height="118"/>
+        <image name="fork.knife" catalog="system" width="94" height="128"/>
+        <image name="ivfluid.bag.fill" catalog="system" width="87" height="128"/>
+        <image name="person.line.dotted.person.fill" catalog="system" width="128" height="59"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
