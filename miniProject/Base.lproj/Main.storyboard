@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,10 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YJu-0Q-4Vm">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
-
+                                <rect key="frame" x="0.0" y="117" width="393" height="652"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" rowHeight="80" id="dzs-j2-Sy6" customClass="TableViewCell" customModule="miniProject" customModuleProvider="target">
@@ -75,9 +74,11 @@
                                     <constraint firstAttribute="width" constant="60" id="4WU-nw-CyA"/>
                                     <constraint firstAttribute="height" constant="60" id="GPV-aj-k4A"/>
                                 </constraints>
+                                <color key="tintColor" name="WidgetBackground"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" imagePadding="0.0">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                    <color key="baseBackgroundColor" red="0.30092635750000002" green="0.33267748359999999" blue="0.3842837214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
@@ -89,16 +90,47 @@
                                     <segue destination="g9B-vz-M18" kind="show" id="fMl-V7-jdy"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhx-U2-wpx">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="싹사원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcz-8i-oeR">
+                                        <rect key="frame" x="169.33333333333334" y="12.333333333333327" width="54.666666666666657" height="25.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigger-character-icon" translatesAutoresizingMaskIntoConstraints="NO" id="CJ4-Rr-yrj">
+                                        <rect key="frame" x="113.33333333333331" y="5" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="gj4-Xd-9S0"/>
+                                            <constraint firstAttribute="height" constant="40" id="vhV-HN-0Y7"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94810396429999999" green="0.97622805830000003" blue="0.99606639149999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="gcz-8i-oeR" firstAttribute="centerX" secondItem="bhx-U2-wpx" secondAttribute="centerX" id="9A3-Q6-TPe"/>
+                                    <constraint firstItem="gcz-8i-oeR" firstAttribute="centerY" secondItem="bhx-U2-wpx" secondAttribute="centerY" id="CZH-8h-kNn"/>
+                                    <constraint firstItem="gcz-8i-oeR" firstAttribute="leading" secondItem="CJ4-Rr-yrj" secondAttribute="trailing" constant="16" id="LIl-So-s15"/>
+                                    <constraint firstAttribute="height" constant="50" id="Uj5-g7-jXv"/>
+                                    <constraint firstItem="CJ4-Rr-yrj" firstAttribute="centerY" secondItem="bhx-U2-wpx" secondAttribute="centerY" id="Xhy-lr-ErN"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YJu-0Q-4Vm" secondAttribute="bottom" id="5x0-fF-EwP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ldk-WM-9hV" secondAttribute="bottom" constant="16" id="7w5-Q0-Jp1"/>
-                            <constraint firstItem="YJu-0Q-4Vm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dUM-68-Te8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YJu-0Q-4Vm" secondAttribute="trailing" id="jTQ-bn-VCM"/>
+                            <constraint firstItem="bhx-U2-wpx" firstAttribute="trailing" secondItem="YJu-0Q-4Vm" secondAttribute="trailing" id="B8f-P0-Xf0"/>
+                            <constraint firstItem="YJu-0Q-4Vm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HV5-p1-cUB"/>
+                            <constraint firstItem="YJu-0Q-4Vm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gwC-5u-DBV"/>
+                            <constraint firstItem="YJu-0Q-4Vm" firstAttribute="top" secondItem="bhx-U2-wpx" secondAttribute="bottom" constant="8" symbolic="YES" id="gyJ-7n-NOk"/>
+                            <constraint firstItem="YJu-0Q-4Vm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iFd-Gx-zbh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ldk-WM-9hV" secondAttribute="trailing" constant="16" id="s6K-91-XyG"/>
-                            <constraint firstItem="YJu-0Q-4Vm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="x7R-eg-16f"/>
+                            <constraint firstItem="YJu-0Q-4Vm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tLH-Q4-YoB"/>
+                            <constraint firstItem="YJu-0Q-4Vm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vWW-k2-W0H"/>
+                            <constraint firstItem="bhx-U2-wpx" firstAttribute="leading" secondItem="YJu-0Q-4Vm" secondAttribute="leading" id="yRW-rX-J9a"/>
+                            <constraint firstItem="bhx-U2-wpx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zW4-OZ-tqO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="식사" image="fork.knife" catalog="system" id="TsU-Hh-vkJ"/>
@@ -151,8 +183,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2fF-Ti-c9W"/>
                                 </constraints>
+                                <color key="tintColor" red="0.30092635750000002" green="0.33267748359999999" blue="0.3842837214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="등록"/>
+                                <buttonConfiguration key="configuration" style="filled" title="등록">
+                                    <color key="baseBackgroundColor" red="0.30092635750000002" green="0.33267748359999999" blue="0.3842837214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="submitButtonTapped:" destination="g9B-vz-M18" eventType="touchUpInside" id="1kU-at-L3W"/>
                                 </connections>
@@ -242,7 +277,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.94810396429999999" green="0.97622805830000003" blue="0.99606639149999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BFM-rM-NEV"/>
                                     <constraint firstItem="e0W-Lt-eec" firstAttribute="leading" secondItem="7Kf-XK-cVo" secondAttribute="trailing" constant="16" id="CP4-fR-vHv"/>
@@ -293,6 +328,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.30092635750000002" green="0.33267748359999999" blue="0.3842837214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.052277595624857377" green="0.092623616004817041" blue="0.11013204043673486" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="RBV-WF-0rG"/>
@@ -312,9 +349,13 @@
         <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="ivfluid.bag.fill" catalog="system" width="87" height="128"/>
         <image name="person.line.dotted.person.fill" catalog="system" width="128" height="59"/>
-
         <image name="plus" catalog="system" width="128" height="113"/>
-
+        <namedColor name="WidgetBackground">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
