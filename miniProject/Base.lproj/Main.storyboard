@@ -51,21 +51,79 @@
             </objects>
             <point key="canvasLocation" x="2762.5954198473282" y="-532.3943661971831"/>
         </scene>
-        <!--View Controller-->
+        <!--Add View Controller-->
         <scene sceneID="J0j-vz-Bin">
             <objects>
-                <viewController id="g9B-vz-M18" sceneMemberID="viewController">
+                <viewController id="g9B-vz-M18" customClass="AddViewController" customModule="miniProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jHl-vm-cGk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="신입사원 행동 강령 제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ndp-lQ-LRg">
+                                <rect key="frame" x="16" y="119" width="361" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XMO-IY-wiZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="titleBtn:" destination="2H9-y0-DOi" eventType="editingDidEnd" id="0TE-uZ-mVZ"/>
+                                    <action selector="titleTextfield:" destination="2H9-y0-DOi" eventType="editingDidEnd" id="uEo-vM-ntv"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PyU-3c-uFv">
+                                <rect key="frame" x="16" y="185" width="361" height="551"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" systemColor="tintColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5r-Pd-WrW">
+                                <rect key="frame" x="16" y="752" width="361" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2fF-Ti-c9W"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="등록"/>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="g9B-vz-M18" eventType="touchUpInside" id="1kU-at-L3W"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ef2-c0-Fd9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PyU-3c-uFv" firstAttribute="leading" secondItem="ef2-c0-Fd9" secondAttribute="leading" constant="16" id="1kl-Oh-Kbz"/>
+                            <constraint firstItem="V5r-Pd-WrW" firstAttribute="top" secondItem="PyU-3c-uFv" secondAttribute="bottom" constant="16" id="1lY-BJ-vji"/>
+                            <constraint firstItem="V5r-Pd-WrW" firstAttribute="leading" secondItem="ef2-c0-Fd9" secondAttribute="leading" constant="16" id="8zG-O7-cdy"/>
+                            <constraint firstItem="ef2-c0-Fd9" firstAttribute="trailing" secondItem="PyU-3c-uFv" secondAttribute="trailing" constant="16" id="BIG-k1-9el"/>
+                            <constraint firstItem="Ndp-lQ-LRg" firstAttribute="top" secondItem="ef2-c0-Fd9" secondAttribute="top" constant="16" id="SjY-BE-aag"/>
+                            <constraint firstItem="ef2-c0-Fd9" firstAttribute="trailing" secondItem="Ndp-lQ-LRg" secondAttribute="trailing" constant="16" id="aTG-rj-sDP"/>
+                            <constraint firstItem="Ndp-lQ-LRg" firstAttribute="leading" secondItem="ef2-c0-Fd9" secondAttribute="leading" constant="16" id="aVw-7l-oiS"/>
+                            <constraint firstItem="ef2-c0-Fd9" firstAttribute="bottom" secondItem="V5r-Pd-WrW" secondAttribute="bottom" constant="16" id="fJi-Yw-Mwg"/>
+                            <constraint firstItem="ef2-c0-Fd9" firstAttribute="trailing" secondItem="V5r-Pd-WrW" secondAttribute="trailing" constant="16" id="hJc-nq-P6W"/>
+                            <constraint firstItem="PyU-3c-uFv" firstAttribute="top" secondItem="Ndp-lQ-LRg" secondAttribute="bottom" constant="16" id="txD-YO-8x4"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oKJ-6f-uvw"/>
+                    <connections>
+                        <outlet property="contentTextview" destination="PyU-3c-uFv" id="ruB-yN-kFD"/>
+                        <outlet property="submitBtn" destination="V5r-Pd-WrW" id="Tpc-HI-hZE"/>
+                        <outlet property="titleTextfield" destination="Ndp-lQ-LRg" id="aOo-DN-gla"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AKv-ck-JTl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2H9-y0-DOi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3729" y="-532"/>
+            <point key="canvasLocation" x="3727.480916030534" y="-532.3943661971831"/>
         </scene>
         <!--회사생활-->
         <scene sceneID="OWY-rX-6Wk">
@@ -161,8 +219,14 @@
         <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="ivfluid.bag.fill" catalog="system" width="87" height="128"/>
         <image name="person.line.dotted.person.fill" catalog="system" width="128" height="59"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
