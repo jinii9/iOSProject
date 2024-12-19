@@ -7,13 +7,14 @@
 
 import UIKit
 
+
 class ViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var array: [Memo] = [Memo(title: "제목", content: "내용입니다.....ㅏ어ㅏㅣㄹ너어리ㅏ너이ㅏ러ㅏ"),
                          Memo(title: "제목2", content: "내용입니다.....ㅏ어ㅏㅣㄹ너어리ㅏ너이ㅏ러ㅏ"),
                          Memo(title: "제목3", content: "내용입니다.....ㅏ어ㅏㅣㄹ너어리ㅏ너이ㅏ러ㅏ")]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
