@@ -8,6 +8,7 @@
 import Foundation
 
 struct Memo {
+    var id: String? = ""
     var title: String? = ""
     var content: String? = ""
 }
