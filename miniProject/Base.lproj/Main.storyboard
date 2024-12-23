@@ -20,9 +20,20 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YJu-0Q-4Vm">
                                 <rect key="frame" x="0.0" y="117" width="393" height="652"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="EHw-x7-OhQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <segments>
+                                        <segment title="공유 메모"/>
+                                        <segment title="내 메모"/>
+                                    </segments>
+                                    <connections>
+                                        <action selector="segmentControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="oz4-Iv-H53"/>
+                                    </connections>
+                                </segmentedControl>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" rowHeight="80" id="dzs-j2-Sy6" customClass="TableViewCell" customModule="miniProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="80"/>
+                                        <rect key="frame" x="0.0" y="82" width="393" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dzs-j2-Sy6" id="87J-TD-R4a">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="80"/>
@@ -91,7 +102,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="g9B-vz-M18" kind="show" id="fMl-V7-jdy"/>
+                                    <segue destination="g9B-vz-M18" kind="show" identifier="addMemo" id="fMl-V7-jdy"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhx-U2-wpx">
@@ -140,6 +151,7 @@
                     <tabBarItem key="tabBarItem" title="식사" image="fork.knife" catalog="system" id="TsU-Hh-vkJ"/>
                     <navigationItem key="navigationItem" id="ftW-UZ-rf2"/>
                     <connections>
+                        <outlet property="segmentControl" destination="EHw-x7-OhQ" id="lMq-DG-HjG"/>
                         <outlet property="tableView" destination="YJu-0Q-4Vm" id="Erf-5N-t5i"/>
                         <segue destination="g9B-vz-M18" kind="show" identifier="showMemoDetail" id="wUU-cq-lFZ"/>
                     </connections>
@@ -157,7 +169,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PyU-3c-uFv">
-                                <rect key="frame" x="16" y="183" width="361" height="553"/>
+                                <rect key="frame" x="16" y="183" width="361" height="483"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -238,19 +250,41 @@
                                     <action selector="titleTextfield:" destination="2H9-y0-DOi" eventType="editingDidEnd" id="uEo-vM-ntv"/>
                                 </connections>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="enZ-33-hq6">
+                                <rect key="frame" x="16" y="713" width="361" height="32"/>
+                                <segments>
+                                    <segment title="공유 메모"/>
+                                    <segment title="내 메모"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="64n-rR-qOX">
+                                <rect key="frame" x="16" y="674" width="361" height="32"/>
+                                <segments>
+                                    <segment title="음식"/>
+                                    <segment title="음료"/>
+                                    <segment title="인맥관리"/>
+                                    <segment title="회사생활"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ef2-c0-Fd9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="V5r-Pd-WrW" firstAttribute="top" secondItem="enZ-33-hq6" secondAttribute="bottom" constant="8" symbolic="YES" id="5g3-sJ-HVO"/>
                             <constraint firstItem="wYK-zc-UaP" firstAttribute="leading" secondItem="ef2-c0-Fd9" secondAttribute="leading" id="60o-YE-QQO"/>
                             <constraint firstItem="V5r-Pd-WrW" firstAttribute="leading" secondItem="ef2-c0-Fd9" secondAttribute="leading" constant="16" id="8zG-O7-cdy"/>
+                            <constraint firstItem="ef2-c0-Fd9" firstAttribute="trailing" secondItem="enZ-33-hq6" secondAttribute="trailing" constant="16" id="C04-Ej-IZb"/>
+                            <constraint firstItem="64n-rR-qOX" firstAttribute="top" secondItem="PyU-3c-uFv" secondAttribute="bottom" constant="8" symbolic="YES" id="F7w-Zg-0DY"/>
+                            <constraint firstItem="enZ-33-hq6" firstAttribute="leading" secondItem="ef2-c0-Fd9" secondAttribute="leading" constant="16" id="F94-om-ggP"/>
+                            <constraint firstItem="ef2-c0-Fd9" firstAttribute="trailing" secondItem="64n-rR-qOX" secondAttribute="trailing" constant="16" id="OIj-hw-Ekd"/>
                             <constraint firstItem="ef2-c0-Fd9" firstAttribute="trailing" secondItem="PyU-3c-uFv" secondAttribute="trailing" constant="16" id="PWy-uY-Mf1"/>
                             <constraint firstItem="wYK-zc-UaP" firstAttribute="trailing" secondItem="ef2-c0-Fd9" secondAttribute="trailing" id="ZjN-5s-TPR"/>
+                            <constraint firstItem="enZ-33-hq6" firstAttribute="top" secondItem="64n-rR-qOX" secondAttribute="bottom" constant="8" symbolic="YES" id="ZtZ-CR-64C"/>
+                            <constraint firstItem="64n-rR-qOX" firstAttribute="leading" secondItem="ef2-c0-Fd9" secondAttribute="leading" constant="16" id="acW-S6-ZrE"/>
                             <constraint firstItem="Ndp-lQ-LRg" firstAttribute="top" secondItem="wYK-zc-UaP" secondAttribute="bottom" constant="8" symbolic="YES" id="cOu-7H-Nca"/>
                             <constraint firstItem="ef2-c0-Fd9" firstAttribute="bottom" secondItem="V5r-Pd-WrW" secondAttribute="bottom" constant="16" id="fJi-Yw-Mwg"/>
                             <constraint firstItem="ef2-c0-Fd9" firstAttribute="trailing" secondItem="V5r-Pd-WrW" secondAttribute="trailing" constant="16" id="hJc-nq-P6W"/>
                             <constraint firstItem="wYK-zc-UaP" firstAttribute="top" secondItem="ef2-c0-Fd9" secondAttribute="top" id="jGw-X2-GYg"/>
-                            <constraint firstItem="V5r-Pd-WrW" firstAttribute="top" secondItem="PyU-3c-uFv" secondAttribute="bottom" constant="16" id="mER-Q2-01q"/>
                             <constraint firstItem="Ndp-lQ-LRg" firstAttribute="leading" secondItem="ef2-c0-Fd9" secondAttribute="leading" constant="16" id="nE8-3h-W7U"/>
                             <constraint firstItem="PyU-3c-uFv" firstAttribute="leading" secondItem="ef2-c0-Fd9" secondAttribute="leading" constant="16" id="pbU-xV-UZA"/>
                             <constraint firstItem="ef2-c0-Fd9" firstAttribute="trailing" secondItem="Ndp-lQ-LRg" secondAttribute="trailing" constant="16" id="v5s-x1-vOm"/>
@@ -259,7 +293,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="oKJ-6f-uvw"/>
                     <connections>
+                        <outlet property="categorySegment" destination="64n-rR-qOX" id="hra-zE-hid"/>
                         <outlet property="contentTextview" destination="PyU-3c-uFv" id="ruB-yN-kFD"/>
+                        <outlet property="segmentControl" destination="enZ-33-hq6" id="Rzy-Dx-XsV"/>
                         <outlet property="submitBtn" destination="V5r-Pd-WrW" id="Tpc-HI-hZE"/>
                         <outlet property="titleTextfield" destination="Ndp-lQ-LRg" id="aOo-DN-gla"/>
                     </connections>
@@ -267,7 +303,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AKv-ck-JTl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="2H9-y0-DOi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3727.480916030534" y="-532.3943661971831"/>
+            <point key="canvasLocation" x="4156" y="-96"/>
         </scene>
         <!--회사생활-->
         <scene sceneID="OWY-rX-6Wk">
@@ -393,7 +429,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wUU-cq-lFZ"/>
+        <segue reference="fMl-V7-jdy"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bigger-character-icon" width="3750" height="3750"/>
