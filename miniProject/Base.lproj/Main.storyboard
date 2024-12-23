@@ -260,7 +260,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="64n-rR-qOX">
                                 <rect key="frame" x="16" y="674" width="361" height="32"/>
                                 <segments>
-                                    <segment title="음식"/>
+                                    <segment title="식사"/>
                                     <segment title="음료"/>
                                     <segment title="인맥관리"/>
                                     <segment title="회사생활"/>
@@ -321,7 +321,7 @@
             </objects>
             <point key="canvasLocation" x="2763" y="1577"/>
         </scene>
-        <!--인멕관리-->
+        <!--인맥관리-->
         <scene sceneID="W1d-ru-7XY">
             <objects>
                 <viewController id="NOk-Kg-80F" sceneMemberID="viewController">
@@ -331,7 +331,7 @@
                         <viewLayoutGuide key="safeArea" id="xSk-UJ-go3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="인멕관리" image="person.line.dotted.person.fill" catalog="system" id="Vpc-aC-ffc"/>
+                    <tabBarItem key="tabBarItem" title="인맥관리" image="person.line.dotted.person.fill" catalog="system" id="Vpc-aC-ffc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3i-DQ-Fgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
